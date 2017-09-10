@@ -9,13 +9,13 @@
 			  url: "products.json",
 			  dataType: 'json',
 			  success: function(data){
-			  	var filteredProducts = [];
-			  	if(search !== null && search !== ''){
-			  		filteredProducts = that.filterProducts(search, data.products);
-			  	} else {
-			  		filteredProducts = that.filterProducts('', data.products);
-			  	}
-			  	that.renderProducts(filteredProducts);
+				var filteredProducts = [];
+				if(search !== null && search !== ''){
+					filteredProducts = that.filterProducts(search, data.products);
+				} else {
+					filteredProducts = that.filterProducts('', data.products);
+				}
+				that.renderProducts(filteredProducts);
 			  }
 			});
 		},
